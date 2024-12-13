@@ -23,17 +23,16 @@ repositories {
 }
 
 dependencies {
+    implementation("io.ktor:ktor-client-core")
+    implementation("io.ktor:ktor-client-java")
+    implementation("io.ktor:ktor-client-logging")
+    implementation("io.ktor:ktor-client-content-negotiation")
+
     implementation("io.ktor:ktor-server-core-jvm")
     implementation("io.ktor:ktor-server-netty-jvm")
-
-//    implementation("io.ktor:ktor-server-cors")
-//    implementation("io.ktor:ktor-server-netty")
-//    implementation("io.ktor:ktor-server-core")
     implementation("io.ktor:ktor-server-status-pages")
-//    implementation("io.ktor:ktor-server-request-validation")
     implementation("io.ktor:ktor-server-content-negotiation")
-//    implementation("io.ktor:ktor-client-auth")
-//    implementation("io.ktor:ktor-client-apache")
+
     implementation("io.ktor:ktor-serialization-kotlinx-json")
 
     implementation("io.insert-koin:koin-core:$koinVersion")
@@ -42,22 +41,9 @@ dependencies {
 
     implementation("ch.qos.logback:logback-classic:$logbackVersion")
 
-//    implementation("org.litote.kmongo:kmongo:$kmongo_version")
-//    implementation("org.litote.kmongo:kmongo-coroutine:$kmongo_version")
-
-//    implementation("org.apache.kafka:kafka-clients:$kafka_version")
-
     testImplementation(kotlin("test"))
-
-//    testImplementation("junit:junit:$junit_version")
-//    testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
-
-
     testImplementation("io.ktor:ktor-server-test-host-jvm")
-//    testImplementation("io.ktor:ktor-server-tests")
-//    testImplementation("io.ktor:ktor-serialization-kotlinx-json")
 
-    testImplementation("io.ktor:ktor-client-content-negotiation")
     testImplementation("io.mockk:mockk:$mockkVersion")
 
     testImplementation("io.insert-koin:koin-test:$koinVersion")
